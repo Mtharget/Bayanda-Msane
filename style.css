@@ -1,0 +1,502 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    overflow-x: hidden;
+}
+
+
+/* Navbar Styles */
+.navbar {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: transparent;
+}
+
+.navbar.scrolled {
+    background-color: #212529;
+    /* Dark background when scrolled */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add shadow for better visibility */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    /* Reduced font size */
+    font-weight: bold;
+    color: #f8f9fa;
+    text-transform: uppercase;
+    padding-right: 10px;
+    /* Add spacing between the brand and the toggle */
+}
+
+.navbar-brand:hover {
+    color: #e9ecef;
+}
+
+.nav-link {
+    color: #f8f9fa;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+/* Custom Navbar Toggler Button */
+.navbar-toggler {
+    border: none;
+    /* Remove default border */
+    outline: none;
+    /* Remove outline */
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* White-colored hamburger icon */
+}
+
+.navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Add a subtle hover effect */
+    border-radius: 5px;
+    /* Rounded corners */
+}
+
+/* .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        } */
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./images/Land.jpeg) no-repeat center center/cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+.hero h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    animation: fadeInDown 1s ease;
+        /* overflow-x: hidden; */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease;
+        /* overflow-x: hidden; */
+}
+
+.hero .btn-custom {
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 30px;
+    padding: 12px 30px;
+    margin-top: 30px;
+    animation: zoomIn 1.5s ease;
+    font-size: 1.2rem;
+}
+
+.btn-custom:hover {
+    background-color: #0056b3;
+}
+
+.about,
+.experience,
+.certifications,
+.services,
+.projects,
+.contact {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.about,
+.projects,
+.contact {
+    background-color: #ffffff;
+}
+
+.experience,
+.certifications {
+    background-color: #f8f9fa;
+    transition: 5s;
+        overflow-x: hidden;
+
+}
+
+.about h2,
+.experience h2,
+.certifications h2,
+.services h2,
+.projects h2,
+.contact h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+}
+
+.about h2::after,
+.experience h2::after,
+.certifications h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background-color: #000;
+    display: block;
+    margin: 10px auto 0;
+}
+
+.service-card,
+.project-card {
+    height: 100%;
+    transition: transform 0.s ease, box-shadow 0.3s ease;
+    
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.services .row .col-md-4 {
+    display: flex;
+    align-items: stretch;
+    
+}
+
+
+
+/* Center the project cards in the row */
+.projects .row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* Adds space between cards */
+}
+
+/* Ensure the project cards are the same height */
+.project-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+        overflow-x: hidden;
+}
+
+/* Style for project card body to make the description look consistent */
+.project-card .card-body {
+    padding: 20px;
+    font-size: 1rem;
+    color: #555;
+        overflow-x: hidden;
+}
+
+/* Hover Effect for Project Cards */
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: white;
+    /* Change text color to white for better visibility */
+}
+
+.project-card .card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+        overflow-x: hidden;
+}
+
+
+/* Hover Effect for Service Cards */
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    /* Add gradient */
+    color: white;
+    /* Change text color to white for better visibility */
+}
+
+/* Base styles for the certifications cards */
+.card {
+    transition: background 0.5s ease, transform 0.3s ease;
+        overflow-x: hidden;
+    /* Add transition for background and transform */
+}
+
+/* Hover Effect for Certifications Cards */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    /* Add gradient */
+    color: white;
+    /* Change text color to white for better visibility */
+}
+
+/* Optionally, change card text color when hovering */
+.card-body:hover {
+    color: white;
+}
+
+.card-body {
+    flex-grow: 1;
+}
+
+
+/* Center the experience cards */
+.experience .row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+        overflow-x: hidden;
+    /* Space between cards */
+}
+
+/* Update experience descriptions style */
+.experience-description {
+    font-size: 1.1rem;
+    /* Slightly larger text */
+    line-height: 1.6;
+    /* Increased line height for readability */
+    list-style-type: square;
+    /* Add square bullet points */
+    color: #495057;
+    /* Dark gray color for the description */
+    padding-left: 20px;
+        overflow-x: hidden;
+}
+
+/* Ensure the cards are the same height */
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+        overflow-x: hidden;
+}
+
+/* Style for card body to make the description look consistent */
+.card-body {
+    padding: 20px;
+    font-size: 1rem;
+    color: #555;
+        overflow-x: hidden;
+}
+
+/* Hover Effect for Experience Cards */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    color: white;
+    /* Change text color to white for better visibility */
+}
+
+.card .card-img-top {
+    max-height: 200px;
+    /* Ensuring image height is consistent */
+    object-fit: cover;
+        overflow-x: hidden;
+}
+
+/* Center the cards in the row */
+.experience .row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+        overflow-x: hidden;
+}
+
+/* Smooth transition for input fields */
+.input-group-focus {
+    transition: border-color 2s ease, box-shadow 2s ease;
+        overflow-x: hidden;
+}
+
+.input-group-focus:focus-within {
+    border: 1px solid #007bff;
+    /* Add a blue border */
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 123, 255, 0.5);
+        overflow-x: hidden;
+    /* Add a glowing effect */
+}
+
+.input-group-focus:focus-within .input-group-text {
+    background-color: #007bff;
+    /* Change icon background color */
+    color: white;
+    /* Change icon color */
+    transition: background-color 2s ease, color 2s ease;
+        overflow-x: hidden;
+}
+
+.form-control {
+    transition: box-shadow 2s ease, border-color 2s ease;
+        overflow-x: hidden;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 2px rgba(0, 123, 255, 0.5);
+    /* Add glowing effect */
+    border-color: #007bff;
+        overflow-x: hidden;
+    /* Change border color */
+}
+
+/* Reset styles when focus is lost */
+.input-group-focus:not(:focus-within) {
+    border: 1px solid #ced4da;
+    /* Default border color */
+    box-shadow: none;
+        overflow-x: hidden;
+    /* Remove glowing effect */
+}
+
+.input-group-focus:not(:focus-within) .input-group-text {
+    background-color: #f8f9fa;
+    /* Default icon background color */
+    color: #495057;
+        overflow-x: hidden;
+    /* Default icon color */
+}
+
+
+
+footer {
+    font-size: 0.9rem;
+    /* Reduce font size for compactness */
+        overflow-x: hidden;
+}
+
+.footer-link {
+    color: #f8f9fa;
+    transition: color 0.3s ease;
+    font-size: 15px;
+        overflow-x: hidden;
+}
+
+.footer-link:hover {
+    color: #007bff;
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.social-icon {
+    color: #f8f9fa;
+    font-size: 1.2rem;
+    /* Reduce icon size */
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+        overflow-x: hidden;
+}
+
+.social-icon:hover {
+    color: #007bff;
+    transform: scale(1.2);
+        overflow-x: hidden;
+    /* Add hover scaling effect */
+}
+
+.whatsapp-blink {
+    animation: blink-glow 5s infinite;
+        overflow-x: hidden;
+}
+
+@keyframes blink-glow {
+
+    0%,
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 10px rgba(37, 211, 102, 0.8), 0 0 20px rgba(37, 211, 102, 0.6);
+    }
+
+    50% {
+        opacity: 0.5;
+        box-shadow: 0 0 5px rgba(37, 211, 102, 0.4), 0 0 10px rgba(37, 211, 102, 0.2);
+    }
+}
+
+footer hr {
+    border-color: rgba(255, 255, 255, 0.2);
+        overflow-x: hidden;
+    /* Subtle divider */
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Fade-in effect for the About Image */
+.about img {
+    animation: fadeIn 2s ease-in-out;
+        overflow-x: hidden;
+}
